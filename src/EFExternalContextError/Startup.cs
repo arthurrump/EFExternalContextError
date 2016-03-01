@@ -18,8 +18,8 @@ namespace EFExternalContextError
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFramework()
-                .AddSqlite()
-                .AddDbContext<EFContext>(options => options.UseSqlite("Data Source=C:\test.db"));
+                .AddSqlServer()
+                .AddDbContext<EFContext>(options => options.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\EFExternalContextError.mdf"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
